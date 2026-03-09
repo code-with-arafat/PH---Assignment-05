@@ -9,6 +9,9 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
+    <!-- Css File -->
+     <link rel="stylesheet" href="style.css">
+
     <!-- Fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"   integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -19,6 +22,32 @@
 
 </head>
 <body>
-    
+
+    <section class="Login-section flex justify-center items-center min-h-screen">
+        <div class="login-container ">
+            <fieldset class="fieldset bg-white border-base-300 rounded-box border w-[400px] px-5 py-5">
+                <img src="./assets/github-logo.png" alt="" class="mx-auto">
+                <h2 class="login-header-title text-[24px] font-semibold text-[#000000] text-center">GitHub Issues Tracker</h2>
+                <p class="login-header-dec text-[16px] text-[#64748B] text-center">Sign in to manage your issues</p>
+
+
+                <label class="label text-[#000000] text-[14px] font-semibold">Username</label>
+                <input type="text" class="input w-full bg-white" placeholder="Username" id="input-username" />
+
+                <label class="label text-[#000000] text-[14px] font-semibold">Password</label>
+                <input type="password" class="input w-full " placeholder="Password" id="input-password" />
+                <button class="btn btn-neutral mt-4" id="login-btn">Login</button>
+
+                <p class="or-text pt-8 text-center text-[20px]">OR</p>
+                <p class="text-center text-[#64748B] text-[16px]">Demo Credentials:</p>
+
+                <div class="login-info-box bg-gray-100 p-5 ">
+                    <p class="text-[#000000] font-bold text-center">username: <span class="text-[#64748B]">admin</span></p>
+                    <p class="text-[#000000] font-bold text-center">password: <span class="text-[#64748B]">admin123</span></p>
+                </div>
+            </fieldset>
+        </div>
+    </section>
+    <script src="login.js"></script>
 </body>
 </html>
