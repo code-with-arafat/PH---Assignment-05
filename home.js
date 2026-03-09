@@ -118,6 +118,14 @@ const showIssuePopup = (issue) => {
     </div>
     `;
 
-  
+      //close popup
+    document.getElementById("close-modal-btn").addEventListener("click", closeModal);
+        //close popup
+    document.getElementById("close-modal-btn").addEventListener("click", closeModal);
 };
+
+const closeModal = () => {
+    document.getElementById("modal-container").innerHTML = "";
+};
+
 
