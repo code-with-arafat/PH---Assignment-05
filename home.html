@@ -4,8 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
+    <!--  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!--  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"   integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
-    <h2>Home Page</h2>
+    <header>
+        <nav>
+            <div class="navbar bg-base-100 shadow-sm">
+                <div class="flex-1">
+                    <a class="btn btn-ghost text-xl font-bold">GitHub Issues Tracker</a>
+                </div>
+                <div class="flex gap-2">
+                    <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
+                    <button class="btn btn-primary">
+                        <i class="fa-solid fa-plus"></i>
+                        New Issues
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="issues-btn-container bg-white shadow-[0_-2px_6px_rgba(0,0,0,0.1),0_2px_6px_rgba(0,0,0,0.1)] w-11/12 mx-auto mt-5  pl-5 flex items-center gap-2 h-[80px] border-gray-400">
+            <button id="all-btn" class="btn btn-primary">All</button>
+            <button id="open-btn" class="btn btn-primary">Open</button>
+            <button id="close-btn" class="btn btn-primary">Close</button>
+        </div>
+
+        <section class="displayIssues w-11/12 mx-auto mt-5">
+            <div id="displayIssues-container" class="grid grid-cols-5 gap-2 mb-5">
+                
+            </div>
+
+        </section>
+        <div id="modal-container"></div>
+    </main>
+
+    <script src="home.js"></script>
 </body>
 </html>
