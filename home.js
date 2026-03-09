@@ -79,3 +79,45 @@ const displayAllIssues = (allIssues) => {
     }
 }
 
+const showIssuePopup = (issue) => {
+    const modalContainer = document.getElementById("modal-container");
+    //popup card
+    modalContainer.innerHTML = `
+    <div class="fixed inset-0 bg-black/40 flex items-center justify-center z-50 p-4">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-lg w-full p-8 relative">
+            <h2 class="text-2xl font-bold text-gray-900 mb-2">${issue.title}</h2>
+            
+            <div class="flex items-center gap-3 mb-4 text-sm">
+                <span class="text-green-600 bg-green-50 px-3 py-1 rounded-full font-medium border border-green-200">
+                   ● ${issue.status}
+                </span>
+                <span class="text-gray-500">Opened by <span class="font-semibold">${issue.author}</span></span>
+            </div>
+
+            <p class="text-gray-600 leading-relaxed mb-8 border-b pb-6">
+                ${issue.description}
+            </p>
+
+            <div class="grid grid-cols-2 gap-4 mb-8">
+                <div>
+                    <p class="text-gray-400 text-xs uppercase font-bold mb-1">Assignee:</p>
+                    <p class="text-gray-900 font-semibold">${issue.assignee || 'Fahim Ahmed'}</p>
+                </div>
+                <div>
+                    <p class="text-gray-400 text-xs uppercase font-bold mb-1">Priority:</p>
+                    <span class="bg-red-500 text-white text-xs px-2 py-0.5 rounded font-bold">${issue.priority.toUpperCase()}</span>
+                </div>
+            </div>
+
+            <div class="flex justify-end">
+                <button id="close-modal-btn" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2.5 px-8 rounded-lg transition shadow-lg">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+    `;
+
+  
+};
+
